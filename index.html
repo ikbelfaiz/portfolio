@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/noscript.css" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    /* Animated Gradient Background - Faster */
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #1e3c72, #2a5298, #6dd5ed, #2193b0);
+      background-size: 400% 400%;
+      animation: gradientBG 6s ease infinite;
+      color: #fff;
+      font-family: sans-serif;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Section styling as floating islands */
+
+
+    .button, .button-overlay {
+      transition: all 0.25s ease-in-out;
+      will-change: transform;
+    }
+
+    .button:hover, .button-overlay:hover {
+      transform: scale(1.04);
+      background-color: #0056b3;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 50px 0;
+    }
+
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease;
+      will-change: transform;
+      background-color: #ffffff10;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      loading: lazy;
+    }
+
+    .button-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body class="is-preload">
+  <div id="wrapper">
+    <nav id="nav">
+      <ul>
+        <li><a href="#intro" class="active">About Me</a></li>
+        <li><a href="#first">Skills</a></li>
+        <li><a href="#second">Projects</a></li>
+      </ul>
+    </nav>
+
+    <div id="main">
+
+      <section id="intro" class="main" data-aos="fade-up">
+        <div class="spotlight">
+          <div class="content">
+            <header class="major">
+              <h2>Hi, I'm Ikbel 👋</h2>
+            </header>
+            <p>I'm an ICT Engineer with a passion for low-level programming and digital security. 
+            My focus is on exploring the intersection of embedded systems and cybersecurity — from IoT device hardening to ethical hacking.</p>
+            <h2>Education</h2>
+            <p>
+              Preparatory classes for engineering studies – IPEIN, Nabeul<br>
+              1st year of engineering cycle – Higher School of Communication of Tunis, SUP’COM<br>
+              Telecommunications major
+            </p>
+            <ul class="actions">
+              <li><a href="#" class="button">Download CV</a></li>
+            </ul>
+          </div>
+          <span class="image"><img src="images/pic01.jpg" alt="Profile Picture" loading="lazy" /></span>
+        </div>
+      </section>
+
+      <section id="first" class="main special" data-aos="fade-right">
+        <header class="major">
+          <h2>Skills</h2>
+        </header>
+        <ul class="features">
+          <li>
+            <span class="icon solid major style1 fa-code"></span>
+            <h3>C/C++</h3>
+            <p>Intermediate</p>
+          </li>
+          <li>
+            <span class="icon solid major fa-cog"></span>
+            <h3>Python</h3>
+            <p>Intermediate</p>
+          </li>
+          <li>
+            <span class="icon solid major style1 fa-laptop-code"></span>
+            <h3>Matlab</h3>
+            <p>Intermediate</p>
+          </li>
+          <li>
+            <span class="icon solid major style5 fa-file-code"></span>
+            <h3>HTML</h3>
+            <p>Beginner</p>
+          </li>
+          <li>
+            <span class="icon solid major fa-terminal"></span>
+            <h3>CSS</h3>
+            <p>Beginner</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="second" class="main special" data-aos="fade-left">
+        <header class="major">
+          <h2>My Projects</h2>
+        </header>
+        <div class="grid-container">
+          <div class="grid-item" data-aos="zoom-in">
+            <b>C Project</b>
+            <span class="image"><img src="images/pic02.jpg" alt="Project 1" loading="lazy" /></span>
+            <a href="https://example.com/page1" target="_blank" class="button-overlay">GitHub</a>
+          </div>
+
+          <div class="grid-item" data-aos="zoom-in">
+            <b>SQL Project</b>
+            <span class="image"><img src="images/pic03.jpg" alt="Project 2" loading="lazy" /></span>
+            <a href="https://example.com/page2" target="_blank" class="button-overlay">GitHub</a>
+          </div>
+
+          <div class="grid-item" data-aos="zoom-in">
+            <b>VHDL Project</b>
+            <span class="image"><img src="images/pic04.jpg" alt="Project 3" loading="lazy" /></span>
+            <a href="https://example.com/page3" target="_blank" class="button-overlay">GitHub</a>
+          </div>
+
+          <div class="grid-item" data-aos="zoom-in">
+            <b>Mobile App <br> (Work in progress)</b>
+            <span class="image"><img src="images/pic05.jpg" alt="Project 4" loading="lazy" /></span>
+            <a href="https://example.com/page3" target="_blank" class="button-overlay">GitHub</a>
+          </div>
+        </div>
+      </section>
+
+     <section id="contact" class="main special" data-aos="fade-up">
+  <header class="major">
+    <h2>Contact Me</h2>
+  </header>
+  <p>If you'd like to get in touch, feel free to reach out via the following channels:</p>
+  <ul class="contact-info" style="list-style:none; padding:0; font-size:18px;">
+    <li data-aos="fade-right" data-aos-delay="100" style="margin-bottom: 10px;">
+      <i class="fas fa-envelope" style="color:#f06; margin-right: 10px;"></i>
+      <strong>Email:</strong> <a href="mailto:ikbel@example.com">ikbel@example.com</a>
+    </li>
+    <li data-aos="fade-right" data-aos-delay="200" style="margin-bottom: 10px;">
+      <i class="fas fa-phone" style="color:#28a745; margin-right: 10px;"></i>
+      <strong>Phone:</strong> +123 456 7890
+    </li>
+    <li data-aos="fade-right" data-aos-delay="300" style="margin-bottom: 10px;">
+      <i class="fab fa-linkedin" style="color:#0077b5; margin-right: 10px;"></i>
+      <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ikbel" target="_blank" rel="noopener">linkedin.com/in/ikbel</a>
+    </li>
+    <li data-aos="fade-right" data-aos-delay="400" style="margin-bottom: 10px;">
+      <i class="fab fa-github" style="color:#333; margin-right: 10px;"></i>
+      <strong>GitHub:</strong> <a href="https://github.com/ikbel" target="_blank" rel="noopener">github.com/ikbel</a>
+    </li>
+  </ul>
+</section>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out-cubic',
+      once: true,
+    });
+  </script>
+</body>
+</html>
