@@ -34,9 +34,6 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Section styling as floating islands */
-
-
     .button, .button-overlay {
       transition: all 0.25s ease-in-out;
       will-change: transform;
@@ -104,28 +101,34 @@
 
     <div id="main">
 
+      <!-- ABOUT ME SECTION WITH ANIMATIONS -->
       <section id="intro" class="main" data-aos="fade-up">
         <div class="spotlight">
           <div class="content">
-            <header class="major">
+            <header class="major" data-aos="fade-up" data-aos-delay="100">
               <h2>Hi, I'm Ikbel 👋</h2>
             </header>
-            <p>I'm an ICT Engineer with a passion for low-level programming and digital security. 
-            My focus is on exploring the intersection of embedded systems and cybersecurity — from IoT device hardening to ethical hacking.</p>
-            <h2>Education</h2>
-            <p>
+            <p data-aos="fade-right" data-aos-delay="200">
+              I'm an ICT Engineer with a passion for low-level programming and digital security. 
+              My focus is on exploring the intersection of embedded systems and cybersecurity — from IoT device hardening to ethical hacking.
+            </p>
+            <h2 data-aos="fade-up" data-aos-delay="300">Education</h2>
+            <p data-aos="fade-right" data-aos-delay="400">
               Preparatory classes for engineering studies – IPEIN, Nabeul<br>
               1st year of engineering cycle – Higher School of Communication of Tunis, SUP’COM<br>
               Telecommunications major
             </p>
-            <ul class="actions">
+            <ul class="actions" data-aos="zoom-in" data-aos-delay="500">
               <li><a href="files/Mohamed Ikbel Faiz CV.pdf" class="button">Download CV</a></li>
             </ul>
           </div>
-          <span class="image"><img src="images/pic01.jpg" alt="Profile Picture" loading="lazy" /></span>
+          <span class="image" data-aos="zoom-in" data-aos-delay="600">
+            <img src="images/pic01.jpg" alt="Profile Picture" loading="lazy" style="transform: scale(1.5);" />
+          </span>
         </div>
       </section>
 
+      <!-- SKILLS -->
       <section id="first" class="main special" data-aos="fade-right">
         <header class="major">
           <h2>Skills</h2>
@@ -159,6 +162,7 @@
         </ul>
       </section>
 
+      <!-- PROJECTS -->
       <section id="second" class="main special" data-aos="fade-left">
         <header class="major">
           <h2>My Projects</h2>
@@ -190,30 +194,31 @@
         </div>
       </section>
 
-     <section id="contact" class="main special" data-aos="fade-up">
-  <header class="major">
-    <h2>Contact Me</h2>
-  </header>
-  <p>If you'd like to get in touch, feel free to reach out via the following channels:</p>
-  <ul class="contact-info" style="list-style:none; padding:0; font-size:18px;">
-    <li data-aos="fade-right" data-aos-delay="100" style="margin-bottom: 10px;">
-      <i class="fas fa-envelope" style="color:#f06; margin-right: 10px;"></i>
-      <strong>Email:</strong> <a href="mailto:ikbel@example.com">mohamedikbel.faiz@supcom.tn</a>
-    </li>
-    <li data-aos="fade-right" data-aos-delay="200" style="margin-bottom: 10px;">
-      <i class="fas fa-phone" style="color:#28a745; margin-right: 10px;"></i>
-      <strong>Phone:</strong> 53 518 553
-    </li>
-    <li data-aos="fade-right" data-aos-delay="300" style="margin-bottom: 10px;">
-      <i class="fab fa-linkedin" style="color:#0077b5; margin-right: 10px;"></i>
-      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ikbel-faiz-58a34b365/" target="_blank" rel="noopener">linkedin.com/in/ikbel-faiz</a>
-    </li>
-    <li data-aos="fade-right" data-aos-delay="400" style="margin-bottom: 10px;">
-      <i class="fab fa-github" style="color:#333; margin-right: 10px;"></i>
-      <strong>GitHub:</strong> <a href="https://github.com/ikbelfaiz" target="_blank" rel="noopener">github.com/ikbelfaiz</a>
-    </li>
-  </ul>
-</section>
+      <!-- CONTACT -->
+      <section id="contact" class="main special" data-aos="fade-up">
+        <header class="major">
+          <h2>Contact Me</h2>
+        </header>
+        <p>If you'd like to get in touch, feel free to reach out via the following channels:</p>
+        <ul class="contact-info" style="list-style:none; padding:0; font-size:18px;">
+          <li data-aos="fade-right" data-aos-delay="100" style="margin-bottom: 10px;">
+            <i class="fas fa-envelope" style="color:#f06; margin-right: 10px;"></i>
+            <strong>Email:</strong> <a href="mailto:ikbel@example.com">mohamedikbel.faiz@supcom.tn</a>
+          </li>
+          <li data-aos="fade-right" data-aos-delay="200" style="margin-bottom: 10px;">
+            <i class="fas fa-phone" style="color:#28a745; margin-right: 10px;"></i>
+            <strong>Phone:</strong> 53 518 553
+          </li>
+          <li data-aos="fade-right" data-aos-delay="300" style="margin-bottom: 10px;">
+            <i class="fab fa-linkedin" style="color:#0077b5; margin-right: 10px;"></i>
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ikbel-faiz-58a34b365/" target="_blank" rel="noopener">linkedin.com/in/ikbel-faiz</a>
+          </li>
+          <li data-aos="fade-right" data-aos-delay="400" style="margin-bottom: 10px;">
+            <i class="fab fa-github" style="color:#333; margin-right: 10px;"></i>
+            <strong>GitHub:</strong> <a href="https://github.com/ikbelfaiz" target="_blank" rel="noopener">github.com/ikbelfaiz</a>
+          </li>
+        </ul>
+      </section>
     </div>
   </div>
 
@@ -232,7 +237,8 @@
     AOS.init({
       duration: 600,
       easing: 'ease-out-cubic',
-      once: true,
+      once: false, // Animations repeat on scroll
+      mirror: true // Animate on scrolling back
     });
   </script>
 </body>
